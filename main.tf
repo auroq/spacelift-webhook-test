@@ -10,10 +10,10 @@ terraform {
   }
 }
 
-module "spacelift_webhook_mystack" {
-  source = "git@github.com:auroq/spacelift.git"
+module "" {
+  source = "https://github.com/auroq/spacelift.git"
 
-  spacelift_stack_id   = "mystackid"
+  spacelift_stack_id   = spacelift_stack.webhook_tester_trigger.id
 }
 
 resource "spacelift_stack" "webhook_tester_trigger" {
