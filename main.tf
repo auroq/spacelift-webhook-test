@@ -15,7 +15,7 @@ provider "aws" {
 }
 
 module "spacelift_webhook" {
-  source = "https://github.com/auroq/spacelift.git"
+  source = "github.com/auroq/spacelift.git"
 
   spacelift_stack_id = spacelift_stack.webhook_tester_trigger.id
 }
